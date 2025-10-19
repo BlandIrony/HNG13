@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <article data-testid="test-profile-card" class="profile-card">
+            <figure class="profile-avatar-container">
+                <img 
+                    src="./FB_IMG_1753775798330.jpg" 
+                    alt="Profile avatar of a professional" 
+                    data-testid="test-user-avatar"
+                    class="profile-avatar"
+                >
+                <figcaption class="sr-only">My profile picture</figcaption>
+            </figure>
+
+            <div class="profile-content">
+                <header class="profile-header">
+                    <h1 data-testid="test-user-name" class="profile-name">Charles Finney</h1>
+                </header>
+
+                <p data-testid="test-user-bio" class="profile-bio">
+                    Frontend web developer passionate about building accessible web experiences. Fascinated by the nature of things.
+                </p>
+
+                <div class="profile-time-container">
+                    <span class="time-label">Current time (ms):</span>
+                    <time data-testid="test-user-time" class="profile-time" datetime="">0</time>
+                </div>
+
+                <nav class="profile-social-nav">
+                    <h2 class="sr-only">Social media links</h2>
+                    <ul data-testid="test-user-social-links" class="social-links">
+                        <li>
+                            <a 
+                                href="https://x.com/BlandIrony" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-twitter"
+                                class="social-link"
+                            >
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://github.com/BlandIrony" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-github"
+                                class="social-link"
+                            >
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="profile-section">
+                    <h2 class="section-title">Hobbies</h2>
+                    <ul data-testid="test-user-hobbies" class="hobby-list">
+                        <li>Photography</li>
+                        <li>Hiking</li>
+                        <li>Reading</li>
+                        <li>Gaming</li>
+                    </ul>
+                </section>
+
+                <section class="profile-section">
+                    <h2 class="section-title">Dislikes</h2>
+                    <ul data-testid="test-user-dislikes" class="dislike-list">
+                        <li>Slow internet</li>
+                        <li>Unnecessary meetings</li>
+                        <li>Broken links</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
