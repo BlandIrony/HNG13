@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About Me</a></li>
+            <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-page">
+        <article class="contact-container">
+            <header class="page-header">
+                <h1>Contact Us</h1>
+                <p>Have a question or want to get in touch? Fill out the form below.</p>
+            </header>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="contactName" class="form-label">
+                        Full Name <span class="required" aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="contactName" 
+                        name="name"
+                        data-testid="test-contact-name"
+                        class="form-input"
+                        required
+                        aria-required="true"
+                        aria-describedby="nameError"
+                    >
+                    <span 
+                        id="nameError" 
+                        data-testid="test-contact-error-name"
+                        class="error-message" 
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="contactEmail" class="form-label">
+                        Email <span class="required" aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        id="contactEmail" 
+                        name="email"
+                        data-testid="test-contact-email"
+                        class="form-input"
+                        required
+                        aria-required="true"
+                        aria-describedby="emailError"
+                    >
+                    <span 
+                        id="emailError" 
+                        data-testid="test-contact-error-email"
+                        class="error-message" 
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <!-- Subject Field -->
+                <div class="form-group">
+                    <label for="contactSubject" class="form-label">
+                        Subject <span class="required" aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="contactSubject" 
+                        name="subject"
+                        data-testid="test-contact-subject"
+                        class="form-input"
+                        required
+                        aria-required="true"
+                        aria-describedby="subjectError"
+                    >
+                    <span 
+                        id="subjectError" 
+                        data-testid="test-contact-error-subject"
+                        class="error-message" 
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="contactMessage" class="form-label">
+                        Message <span class="required" aria-label="required">*</span>
+                    </label>
+                    <textarea 
+                        id="contactMessage" 
+                        name="message"
+                        data-testid="test-contact-message"
+                        class="form-textarea"
+                        rows="6"
+                        required
+                        aria-required="true"
+                        aria-describedby="messageError"
+                    ></textarea>
+                    <span 
+                        id="messageError" 
+                        data-testid="test-contact-error-message"
+                        class="error-message" 
+                        role="alert"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                    type="submit" 
+                    data-testid="test-contact-submit"
+                    class="submit-button"
+                >
+                    Send Message
+                </button>
+
+                <!-- Success Message -->
+                <div 
+                    id="successMessage" 
+                    data-testid="test-contact-success"
+                    class="success-message" 
+                    role="status"
+                    aria-live="polite"
+                    style="display: none;"
+                >
+                    Thank you for your message! We'll get back to you soon.
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
